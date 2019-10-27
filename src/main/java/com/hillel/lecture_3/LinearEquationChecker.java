@@ -5,11 +5,17 @@ package com.hillel.lecture_3;
  */
 public class LinearEquationChecker {
 
-    public int linearEquation(int a, int b) {
-
-//        TODO implements result
-        int result = 0;
-
+    public double linearEquation(int a, int b) {
+        double result =0;
+        if (a!=0){
+            result=-(b/a);
+        }
+        else if (a==0 && b!=0){
+            result=0.0d;
+        }
+        else{
+            result=0.0d;
+        }
         return result;
     }
 }

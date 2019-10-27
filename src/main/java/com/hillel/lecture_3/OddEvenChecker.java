@@ -6,11 +6,20 @@ package com.hillel.lecture_3;
 public class OddEvenChecker {
 
 
+    public  void main(String[] args) {
+        checkNumber(24);
+        System.out.println("BYE");
+    }
+
     public String checkNumber(int number) {
+        if (number % 2 == 0) {
+            String result = "Even Number";
+            return result;
 
-//        TODO implements result
-        String result = "";
+        } else {
+            String result = "Odd Number";
+            return result;
+        }
 
-        return result;
     }
 }

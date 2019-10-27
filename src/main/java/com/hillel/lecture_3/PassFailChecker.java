@@ -5,11 +5,21 @@ package com.hillel.lecture_3;
  */
 public class PassFailChecker {
 
-    public String checkNumber(int number) {
+    public   void main(String[] args) {
+        checkNumber(50);
+        System.out.println("Done");
+    }
+    public String checkNumber(int mark) {
 
-//        TODO implements result
-        String result = "";
+        if (mark>=50){
+            String result = "PASS";
+            return result;
 
-        return result;
+
+        }
+        else {String result = "FAIL";
+            return result;
+        }
+
     }
 }

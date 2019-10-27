@@ -5,10 +5,21 @@ package com.hillel.lecture_3;
  */
 public class TriangleChecker {
 
-    public String isTriangleIsosceles(int a, int b, int c) {
 
-//        TODO implements result
+    public String isTriangleIsosceles(int a, int b, int c) {
         String result = "";
+        if (a==b && a!=c){
+            result="Isosceles triangle!";
+        }
+        else if (a==c && a!=b){
+            result="Isosceles triangle!";
+        }
+        else if (b==c && b!=a){
+            result="Isosceles triangle!";
+        }
+        else {
+            result="No isosceles triangle!";
+        }
 
         return result;
     }
