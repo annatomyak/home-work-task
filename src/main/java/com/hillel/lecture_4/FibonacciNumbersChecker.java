@@ -1,12 +1,13 @@
 package com.hillel.lecture_4;
 
-import static javafx.scene.input.KeyCode.F;
+import io.qameta.allure.Step;
 
 /**
  * Created by alpa on 10/25/19
  */
 public class FibonacciNumbersChecker {
 
+    @Step
     public int[] getFibonacciNumbers(int number) {
         int[] result = new int[number];
 
