@@ -7,17 +7,23 @@ public class BinaryToDecimalChecker {
 
     public int fromDecimalToBinary(int value) {
 
-//        TODO implements result
-        int result = 0;
+        StringBuilder result = new StringBuilder();
+        while(value >= 1) {
+            if (value % 2 == 0)
+                result.append("0");
+            else
+                result.append("1");
+            value /= 2;
+        }
 
-        return result;
+        System.out.println(result.reverse());
+
+        return new Integer(result.toString());
     }
 
     public int fromBinaryToDecimal(int value) {
 
-//        TODO implements result
-        int result = 0;
-
-        return result;
+        int result = Integer.parseInt(String.valueOf(value), 2);
+          return result;
     }
 }
