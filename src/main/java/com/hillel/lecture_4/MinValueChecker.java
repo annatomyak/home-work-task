@@ -18,12 +18,7 @@ public class MinValueChecker {
             if(x < min) min = x;
             result=min;
         }
-       /* for (int i = 0; i < value.length; i++) {
-            if (value[i] < value[i]) {
-                result = i;
-            }
 
-        }*/
         return result;
     }
 }

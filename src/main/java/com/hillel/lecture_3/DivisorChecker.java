@@ -11,13 +11,12 @@ public class DivisorChecker {
     public String checkDivisor(int divisor, int number) {
 
         String result = "";
-        if (divisor % number ==0){
-            result="The number "+ divisor+" is divisor of the number "+number;
-        }
-        else {
-            result="The number "+ divisor+" is not divisor of the number "+number;
-
+        if (divisor % number == 0) {
+            result = "The number " + number + " is divisor of the number " + divisor;
+        } else {
+            result = "The number " + number + " is not divisor of the number " + divisor;
         }
         return result;
     }
 }
+

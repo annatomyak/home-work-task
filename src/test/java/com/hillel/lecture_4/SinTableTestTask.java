@@ -5,6 +5,11 @@ package com.hillel.lecture_4;
  */
 public class SinTableTestTask {
     public static void main(String[] args) {
+        String[] columnNames = {
+                "degree",
+                "sin x",
+
+        };
         double result = 0;
         for (int i = 0; i <= 360; i = i + 10) {
             result = Math.sin(i);
@@ -13,6 +18,6 @@ public class SinTableTestTask {
             System.out.print(i);
 
         }
-        System.out.println("");
+
     }
 }
