@@ -5,19 +5,23 @@ package com.hillel.lecture_4;
  */
 public class SinTableTestTask {
     public static void main(String[] args) {
-        String[] columnNames = {
-                "degree",
-                "sin x",
+        table();
+    }
+    public static double table(){
+        double result = 0d;
+        String leftAlignFormat = "| %-9s | %-10f |%n";
 
-        };
-        double result = 0;
+        System.out.format("+-----------+------------+%n");
+        System.out.format("| degree    | sin x      |%n");
+        System.out.format("+-----------+------------+%n");
         for (int i = 0; i <= 360; i = i + 10) {
             result = Math.sin(i);
+            System.out.format(leftAlignFormat,i, result);
+    }
+        System.out.format("+-----------+------------+%n");
+        return result;
 
-            System.out.print(result);
-            System.out.print(i);
-
-        }
 
     }
+
 }
