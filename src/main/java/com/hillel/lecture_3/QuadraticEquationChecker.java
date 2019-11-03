@@ -28,4 +28,5 @@ public class QuadraticEquationChecker {
         }
         return result;
     }
+
 }
