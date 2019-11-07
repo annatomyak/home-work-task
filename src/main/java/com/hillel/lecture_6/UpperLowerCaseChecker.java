@@ -28,19 +28,18 @@ public class UpperLowerCaseChecker {
 
     @Step
     public String eachSentenceToUpperCase(String sentence) {
+        String result = "";
+      String delimeter = "(?<=\\. )";
+        for (String word : sentence.split(delimeter)) {
 
-//        TODO implements result
-        char[] chars = sentence.toLowerCase().toCharArray();
-        boolean found = false;
-        for (int i = 0; i < chars.length; i++) {
-            if (!found && Character.isLetter(chars[i])) {
-                chars[i] = Character.toUpperCase(chars[i]);
-                found = true;
-            } else if (Character.(".")); { // You can add other chars here
-                found = false;
-            }
+            word = word.substring(0, 1).toUpperCase() + word.substring(1);
+            result += word;
         }
-        return String.valueOf(chars);
+        result = result.trim();
+
+        return result;
+
+
     }
 
     @Step
@@ -48,7 +47,14 @@ public class UpperLowerCaseChecker {
 
 //        TODO implements result
         String result = "";
+        String[] arr = sentence.split(" ");
+        StringBuffer sb = new StringBuffer();
 
-        return result;
+        for (int i = 0; i < arr.length; i++) {
+            sb.append(Character.toUpperCase(arr[i].charAt(0)))
+                    .append(arr[i].substring(1)).append(" ");
+        }
+        return result=sb.toString().trim();
+
     }
 }

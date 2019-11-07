@@ -9,13 +9,36 @@ public class SquareWordPatternChecker {
 
 
     @Step
-    public String applySquareWordPattern(String word) {
-
-//        TODO implements result
+    public static String applySquareWordPattern(String word) {
         String result = "";
+        StringBuffer sb;
 
-        return result;
+        for (int i = 0; i < word.length(); i++) {
+            sb = new StringBuffer();
+            int j = i;  // Current index in str
+            int k = 0;  // Current index in temp
+
+
+            for (int k2 = j; k2 < word.length(); k2++) {
+                sb.insert(k, word.charAt(j));
+                k++;
+                j++;
+            }
+
+            // Copying the first part from the point
+            // of rotation.
+            j = 0;
+            while (j < i) {
+                sb.insert(k, word.charAt(j));
+                j++;
+                k++;
+
+            }
+            result = result + sb.toString().concat(", ");
+
+
+
+
+        } return result.substring(0, result.length() - 2);
     }
-
-
 }
