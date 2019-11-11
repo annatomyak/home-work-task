@@ -1,21 +1,39 @@
 package com.hillel.lecture_7;
 
+import io.qameta.allure.Step;
+
 public class FractionNumbers {
    public double numberOne;
    public double numberTwo;
 
-   public void plus(double numberOne,double numberTwo){
-      System.out.println("Plus= "+(numberOne+numberTwo)); ;
-   }
-    public void minus(double numberOne,double numberTwo){
-        System.out.println("minus= "+(numberOne-numberTwo)); ;
-    }
-    public void multiply(double numberOne,double numberTwo){
-        System.out.println("multiply= "+(numberOne*numberTwo)); ;
+   public FractionNumbers(double numberOne, double numberTwo) {
+    this.numberOne=numberOne;
+    this.numberTwo=numberTwo;
     }
 
-    public void divide(double numberOne,double numberTwo){
-        System.out.println("divide= "+(numberOne/numberTwo)); ;
+    public FractionNumbers() {
+
+    }
+
+    @Step
+    public  double plus(){
+      System.out.println("Plus= "+(this.numberOne+this.numberTwo));
+      return this.numberOne+this.numberTwo;
+   }
+    @Step
+    public double minus(){
+        System.out.println("minus= "+(this.numberOne-this.numberTwo));
+        return this.numberOne-this.numberTwo;
+    }
+    @Step
+    public double multiply(){
+        System.out.println("multiply= "+(this.numberOne*this.numberTwo));
+        return this.numberOne*this.numberTwo;
+    }
+    @Step
+    public double divide(){
+        System.out.println("divide= "+(this.numberOne/this.numberTwo));
+        return (this.numberOne/this.numberTwo);
     }
     public double getNumberOne() {
         return numberOne;
@@ -36,8 +54,8 @@ public class FractionNumbers {
     @Override
     public String toString() {
         return "FractionNumbers{" +
-                "numberOne=" + numberOne +
-                ", numberTwo=" + numberTwo +
+                "numberOne=" + this.numberOne +
+                ", numberTwo=" + this.numberTwo +
                 '}';
     }
 }

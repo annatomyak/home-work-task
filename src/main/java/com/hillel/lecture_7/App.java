@@ -7,10 +7,11 @@ public class App {
         fractionNumbers.setNumberTwo(2.5);
         System.out.println(fractionNumbers.toString());
 
-        fractionNumbers.plus(fractionNumbers.getNumberOne(),fractionNumbers.getNumberTwo());
-        fractionNumbers.minus(fractionNumbers.getNumberOne(),fractionNumbers.getNumberTwo());
-        fractionNumbers.multiply(fractionNumbers.getNumberOne(),fractionNumbers.getNumberTwo());
-        fractionNumbers.divide(fractionNumbers.getNumberOne(),fractionNumbers.getNumberTwo());
+        fractionNumbers.plus();
+        fractionNumbers.minus();
+        fractionNumbers.multiply();
+        fractionNumbers.divide();
+        fractionNumbers.toString();
 
 
     }
