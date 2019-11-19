@@ -18,6 +18,16 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
-        return 0;
+        String number = String.valueOf(n);
+        number = number.substring(1) + number.substring(0, 1);
+        long maxNumber = Long.parseLong(number);
+
+        for (int i = 1; i < number.length() - 1; i ++) {
+            number = number.substring(0, i) + number.substring(i + 1) + number.substring(i, i + 1);
+            if (Long.parseLong(number) > maxNumber) {
+                maxNumber = Long.parseLong(number);
+            }
+        }
+        return maxNumber;
     }
 }
