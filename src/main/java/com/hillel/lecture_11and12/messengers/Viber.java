@@ -9,6 +9,7 @@ public class Viber implements Messenger {
     @Override
     public void sendTextMessage(String message, Contacts contacts) {
         System.out.println("Your message: '"+message+"' sent to"+contacts.getName()+" in "+nameViberMessenger);
+
     }
 
     @Override

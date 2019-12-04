@@ -4,6 +4,7 @@ import com.hillel.lecture_11and12.enums.Contacts;
 
 public class User {
     public static void main(String[] args) {
+        String nullMessage=null;
         FacebookMessenger facebookMessenger =new FacebookMessenger();
         facebookMessenger.sendTextMessage("Hello", Contacts.IRINA);
         facebookMessenger.aboutMessenger();
@@ -31,6 +32,12 @@ public class User {
         telegram.sendPicture(Contacts.KATERINA);
         telegram.sendTextMessage("how are you",Contacts.ANNA);
         telegram.sendSmile("=(",Contacts.IRINA);
+        telegram.getId("1e4245465");
+        telegram.getId("4185128528");
+        telegram.sentUrl("https://www.google.com/");
+        telegram.sentUrl("gfht");
+        telegram.enterLoginAndPassword("admin","admin");
+        telegram.enterLoginAndPassword("admin","123vjgj");
         viber.createChat(Contacts.IRINA,Contacts.SERGEY);
 
 
