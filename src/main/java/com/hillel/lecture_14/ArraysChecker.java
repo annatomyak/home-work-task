@@ -1,6 +1,6 @@
 package com.hillel.lecture_14;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by alpa on 12/5/19
@@ -8,39 +8,47 @@ import java.util.List;
 public class ArraysChecker {
 
 
-    public List<String> getReversList(List<String> list) {
-
-//        TODO implements result
-
-        return list;
+    public ArrayList getReversList(List<String> list) {
+        ArrayList result = new ArrayList<>();
+        //  Collections.reverse(list);
+        for (int i = list.size() - 1; i >= 0; i--) {
+            result.add(list.get(i));
+        }
+        return result;
     }
 
     public String getLongestString(List<String> list) {
 
-//        TODO implements result
         String result = "";
-
+        for (int i = 0; i < list.size() - 1; i++) {
+            if (list.get(i).length() > result.length()) {
+                result = list.get(i);
+            }
+        }
         return result;
+
     }
 
     public List<String> changeIndex(List<String> list) {
 
-//        TODO implements result
+        list.set(1, "Star Lord");
+        list.set(3, "Captain America");
+
 
         return list;
     }
+
 
     public List<String> removeDuplicates(List<String> list) {
-
-//        TODO implements result
-
-        return list;
+        List correctedList = new ArrayList(); Set a = new HashSet();
+        a.addAll(list);
+        correctedList.addAll(a);
+        return correctedList;
     }
+        public List<String> sortList (List<String>list){
 
-    public List<String> sortList(List<String> list) {
+//
+            return list;
+        }
 
-//        TODO implements result
-
-        return list;
-    }
 }
